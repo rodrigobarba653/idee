@@ -32,7 +32,7 @@ export function Consultant() {
   return (
     <section className="w-full bg-white">
       {/* Top: content + image */}
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:pt-24 pt-16 lg:px-16">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:gap-16 pt-16 lg:px-16">
         {/* Left: tagline, heading, features, CTA */}
         <div className="flex flex-col">
           <span className="mb-4 inline-block w-fit rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-600 bg-neutral-100">
@@ -61,7 +61,7 @@ export function Consultant() {
             ))}
           </ul>
           <a
-            href="#"
+            href="mailto:contacto@idee.academy"
             className="inline-flex w-fit items-center justify-center rounded-lg px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-95"
             style={{ backgroundColor: "var(--primary)" }}
           >

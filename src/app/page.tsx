@@ -4,6 +4,7 @@ import { Audience } from "@/components/Audience";
 import { Consultant } from "@/components/Consultant";
 import { Team } from "@/components/Team";
 import { Paquetes } from "@/components/Paquetes";
+import { UniversoIdee } from "@/components/UniversoIdee";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <Audience />
       <Consultant />
       <Team />
-      <Paquetes />
+      <UniversoIdee />
     </main>
   );
 }

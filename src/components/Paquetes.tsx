@@ -150,13 +150,13 @@ export function Paquetes() {
                   </li>
                 ))}
               </ul>
-              <button
-                type="button"
-                className="mt-auto w-full rounded-lg px-4 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-95"
+              <a
+                href="mailto:contacto@idee.academy"
+                className="mt-auto block w-full rounded-lg px-4 py-3 text-center text-sm font-semibold text-white transition-opacity hover:opacity-95"
                 style={{ backgroundColor: "var(--primary)" }}
               >
                 Buy This
-              </button>
+              </a>
             </article>
           ))}
         </div>

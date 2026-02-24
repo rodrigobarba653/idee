@@ -14,7 +14,7 @@ const items = [
 
 export function Audience() {
   return (
-    <section className="w-full bg-white px-6 py-16 lg:px-16 lg:py-24">
+    <section className="w-full bg-white px-6 py-16 lg:px-16">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16 bg-gray-200 border-b-4 border-primary md:p-16 p-8 shadow-slate-300 shadow-lg">
         {/* Left: circular image */}
         <div className="relative mx-auto aspect-square w-full lg:mx-0">

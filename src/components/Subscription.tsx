@@ -27,7 +27,11 @@ export function Subscription() {
             <p className="mb-6 mt-1 text-sm text-neutral-500">
               Value Lab gratuito de 20 minutos.
             </p>
-            <form className="flex flex-col gap-4">
+            <form
+              className="flex flex-col gap-4"
+              action="mailto:contacto@idee.academy"
+              method="get"
+            >
               <div className="grid gap-4 sm:grid-cols-2">
                 <input
                   type="text"

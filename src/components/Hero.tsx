@@ -46,7 +46,7 @@ export function Hero() {
           <em className="font-normal not-italic opacity-90">trabajar</em> mejor.
         </h1>
         <a
-          href="#"
+          href="mailto:contacto@idee.academy"
           className="inline-flex w-fit items-center justify-center rounded-lg px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-95"
           style={{ backgroundColor: "var(--dark)" }}
         >
