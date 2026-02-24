@@ -23,7 +23,6 @@ export function Audience() {
             alt="Profesionales revisando documentos"
             fill
             className="object-cover object-center"
-            sizes="(max-width: 1024px) 384px, 33vw"
           />
         </div>
 
