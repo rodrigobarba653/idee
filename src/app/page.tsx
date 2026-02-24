@@ -5,16 +5,30 @@ import { Consultant } from "@/components/Consultant";
 import { Team } from "@/components/Team";
 import { Paquetes } from "@/components/Paquetes";
 import { UniversoIdee } from "@/components/UniversoIdee";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Subscription />
-      <Audience />
-      <Consultant />
-      <Team />
-      <UniversoIdee />
+      <ScrollReveal>
+        <Subscription />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Audience />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Consultant />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Team />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Paquetes />
+      </ScrollReveal>
+      <ScrollReveal>
+        <UniversoIdee />
+      </ScrollReveal>
     </main>
   );
 }
