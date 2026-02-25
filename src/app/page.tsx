@@ -3,7 +3,6 @@ import { Subscription } from "@/components/Subscription";
 import { Audience } from "@/components/Audience";
 import { Consultant } from "@/components/Consultant";
 import { Team } from "@/components/Team";
-import { Paquetes } from "@/components/Paquetes";
 import { UniversoIdee } from "@/components/UniversoIdee";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
@@ -22,9 +21,6 @@ export default function Home() {
       </ScrollReveal>
       <ScrollReveal>
         <Team />
-      </ScrollReveal>
-      <ScrollReveal>
-        <Paquetes />
       </ScrollReveal>
       <ScrollReveal>
         <UniversoIdee />

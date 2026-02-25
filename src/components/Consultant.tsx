@@ -61,7 +61,9 @@ export function Consultant() {
             ))}
           </ul>
           <a
-            href="mailto:contacto@idee.academy"
+            href="https://wa.me/525551048399"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-fit items-center justify-center rounded-lg px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-95"
             style={{ backgroundColor: "var(--primary)" }}
           >

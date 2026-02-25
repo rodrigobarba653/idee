@@ -28,11 +28,11 @@ export function Header() {
       >
         <div className="flex items-center gap-3 text-sm text-white">
           <a
-            href="tel:+525551048399"
+            href="https://wa.me/525551048399"
             className="flex items-center gap-1.5 transition-opacity hover:opacity-90"
-            aria-label="Llamar"
+            aria-label="WhatsApp"
           >
-            <Icon icon="mdi:phone" className="h-4 w-4 shrink-0" />
+            <Icon icon="mdi:whatsapp" className="h-4 w-4 shrink-0" />
             <span className="hidden sm:inline">+52 55 5104 8399</span>
           </a>
           <span className="h-4 w-px bg-white/50" aria-hidden />

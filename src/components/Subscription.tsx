@@ -27,11 +27,7 @@ export function Subscription() {
             <p className="mb-6 mt-1 text-sm text-neutral-500">
               Value Lab gratuito de 20 minutos.
             </p>
-            <form
-              className="flex flex-col gap-4"
-              action="mailto:contacto@idee.academy"
-              method="get"
-            >
+            <form className="flex flex-col gap-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <input
                   type="text"
@@ -62,13 +58,15 @@ export function Subscription() {
                 className="resize-y rounded-lg border border-neutral-300 px-4 py-3 text-neutral-800 placeholder:text-neutral-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                 aria-label="Mensaje"
               />
-              <button
-                type="submit"
-                className="mt-2 w-full rounded-lg px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-95 sm:w-auto"
+              <a
+                href="https://wa.me/525551048399"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block w-full rounded-lg px-6 py-3.5 text-center text-sm font-semibold text-white transition-opacity hover:opacity-95 sm:w-auto"
                 style={{ backgroundColor: "var(--primary)" }}
               >
                 Enviar
-              </button>
+              </a>
             </form>
           </div>
         </div>

@@ -151,7 +151,9 @@ export function Paquetes() {
                 ))}
               </ul>
               <a
-                href="mailto:contacto@idee.academy"
+                href="https://wa.me/525551048399"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-auto block w-full rounded-lg px-4 py-3 text-center text-sm font-semibold text-white transition-opacity hover:opacity-95"
                 style={{ backgroundColor: "var(--primary)" }}
               >

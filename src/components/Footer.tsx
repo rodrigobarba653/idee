@@ -8,11 +8,11 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 lg:px-16">
         <div className="mb-4 flex flex-wrap items-center justify-center gap-6 text-sm text-neutral-600">
           <a
-            href="tel:+525551048399"
+            href="https://wa.me/525551048399"
             className="flex items-center gap-2 transition-colors hover:text-dark"
-            aria-label="Llamar"
+            aria-label="WhatsApp"
           >
-            <Icon icon="mdi:phone" className="h-4 w-4 shrink-0" />
+            <Icon icon="mdi:whatsapp" className="h-4 w-4 shrink-0" />
             +52 55 5104 8399
           </a>
           <a
@@ -26,6 +26,13 @@ export function Footer() {
         </div>
         <p className="text-center text-sm text-neutral-600">
           © 2026 IDEE. Todos los derechos reservados.
+          {" · "}
+          <a
+            href="/aviso-de-privacidad"
+            className="underline transition-colors hover:text-dark"
+          >
+            Aviso de Privacidad
+          </a>
         </p>
       </div>
     </footer>
