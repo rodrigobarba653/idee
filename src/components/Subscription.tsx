@@ -1,4 +1,20 @@
+"use client";
+
+import { useRef, useState } from "react";
+
 export function Subscription() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    videoRef.current?.play();
+    setIsPlaying(true);
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+  };
+
   return (
     <section className="w-full bg-white px-6 py-16 md:px-12 lg:px-16 lg:py-24">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16">
@@ -11,7 +27,7 @@ export function Subscription() {
             ¿Tu negocio ya vende, pero tú sigues agotado, apagando fuegos y sin
             ver el crecimiento que esperabas?
           </h2>
-          <p className="mb-8 text-base text-neutral-600 md:text-lg">
+          <p className="mb-12 text-base text-neutral-600 md:text-lg">
             Toma gratis nuestra clase táctica de 20 minutos enfocada en la
             operación diaria y la toma de decisiones clave para tu negocio.
           </p>
@@ -72,24 +88,34 @@ export function Subscription() {
         </div>
 
         {/* Right: video */}
-        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-200 lg:sticky lg:top-8 lg:aspect-4/3 lg:self-start">
-          {/* Placeholder: replace with your video thumbnail or iframe embed */}
-          <div className="absolute inset-0 bg-neutral-300" aria-hidden />
-          <button
-            type="button"
-            className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-white transition-opacity hover:opacity-95"
-            style={{ backgroundColor: "var(--primary)" }}
-            aria-label="Reproducir video"
-          >
-            <svg
-              className="ml-1 h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-200 lg:sticky lg:top-8 lg:aspect-4/6 lg:self-start">
+          <video
+            ref={videoRef}
+            src="/videos/video.mp4"
+            className="h-full w-full object-cover"
+            controls={isPlaying}
+            playsInline
+            onPause={handlePause}
+            onEnded={handlePause}
+          />
+          {!isPlaying && (
+            <button
+              type="button"
+              onClick={handlePlay}
+              className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-white transition-opacity hover:opacity-95"
+              style={{ backgroundColor: "var(--primary)" }}
+              aria-label="Reproducir video"
             >
-              <path d="M8 5v14l11-7L8 5z" />
-            </svg>
-          </button>
+              <svg
+                className="ml-1 h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden
+              >
+                <path d="M8 5v14l11-7L8 5z" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
     </section>
