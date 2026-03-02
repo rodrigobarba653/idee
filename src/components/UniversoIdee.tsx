@@ -63,7 +63,8 @@ function BasicPackageCardStyle({
       )}
       {priceUsd != null && (
         <p className="mb-2 text-lg font-bold text-dark">
-          ${priceUsd} <span className="text-sm font-normal text-neutral-500">USD</span>
+          ${priceUsd}{" "}
+          <span className="text-sm font-normal text-neutral-500">USD</span>
         </p>
       )}
       <h3 className="mb-1 text-xl font-bold text-dark">{title}</h3>
@@ -158,7 +159,7 @@ export function UniversoIdee() {
 
         {/* Tabs */}
         <div
-          className="mb-16 flex gap-1 rounded-xl border border-neutral-300 p-1.5 w-fit"
+          className="mb-16 flex sm:flex-nowrap flex-wrap gap-1 rounded-xl sm:border border-neutral-300 p-1.5 w-fit"
           role="tablist"
           aria-label="Paquetes IDEE"
         >
@@ -167,7 +168,7 @@ export function UniversoIdee() {
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
-              className={`rounded-lg border px-4 py-2.5 text-sm font-semibold transition-colors md:px-5 md:text-base ${
+              className={`rounded-lg border px-4 py-2.5 sm:text-sm text-xs font-semibold transition-colors md:px-5 md:text-base ${
                 activeTab === tab.id
                   ? "border-dark bg-dark text-white"
                   : "border-transparent bg-neutral-100 text-neutral-700 hover:border-neutral-300 hover:bg-neutral-200"
