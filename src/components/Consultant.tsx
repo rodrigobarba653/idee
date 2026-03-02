@@ -6,26 +6,46 @@ import { Icon } from "@iconify/react";
 const features = [
   {
     icon: "mdi:clipboard-text-outline",
-    title: "Best Business Consulting",
+    title: "Experiencia real, no teoría",
     description:
-      "Fusce condimentum mattis placerat odio donec lacus porta torquent, mauris gravida rutrum",
+      "Más de 25 años de consultoría aterrizados al día a día del negocio.",
   },
   {
-    icon: "mdi:headset",
-    title: "24/7 Customer Support",
+    icon: "mdi:target",
+    title: "100% táctico y aplicable",
     description:
-      "Fusce condimentum mattis placerat odio donec lacus porta torquent, mauris gravida rutrum",
+      "Herramientas claras para operar mejor, sin lenguaje corporativo complicado.",
+  },
+  {
+    icon: "mdi:order-bool-descending",
+    title: 'Orden y claridad, no más "chamba"',
+    description: "Mejores decisiones sin cargar todo tú.",
+  },
+  {
+    icon: "mdi:school-outline",
+    title: 'Sistema Educativo Único "de la Teoría a la Práctica"',
+    description: "",
+  },
+  {
+    icon: "mdi:currency-usd",
+    title: "Alta calidad educativa a precios muy accesibles",
+    description: "",
   },
 ];
 
 const stats = [
-  { icon: "mdi:cog-outline", value: "1,200+", label: "Business Solution" },
   {
-    icon: "mdi:account-supervisor-outline",
-    value: "2.2k",
-    label: "Solution Experts",
+    icon: "mdi:map-marker-multiple",
+    text: "500 proyectos exitosos en México y Centroamérica",
   },
-  { icon: "mdi:earth", value: "196k", label: "Worldwide Partner" },
+  {
+    icon: "mdi:calendar-clock",
+    text: "Experiencia probada desde el año 2000",
+  },
+  {
+    icon: "mdi:account-group",
+    text: "+20000 Emprendedores, Empresarios y Profesionales desarrollados",
+  },
 ];
 
 export function Consultant() {
@@ -35,18 +55,15 @@ export function Consultant() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:gap-16 pt-16 lg:px-16">
         {/* Left: tagline, heading, features, CTA */}
         <div className="flex flex-col">
-          <span className="mb-4 inline-block w-fit rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-600 bg-neutral-100">
-            Business Consultancy
-          </span>
           <h2
             className="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl"
             style={{ color: "var(--dark)" }}
           >
             ¿Por qué IDEE?
           </h2>
-          <ul className="mb-8 flex flex-col gap-6">
+          <ul className="mb-8 flex flex-col gap-4">
             {features.map((item, i) => (
-              <li key={i} className="flex gap-4">
+              <li key={i} className="flex items-center gap-4">
                 <span
                   className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-dark"
                   aria-hidden
@@ -55,7 +72,11 @@ export function Consultant() {
                 </span>
                 <div>
                   <h3 className="mb-1 font-bold text-dark">{item.title}</h3>
-                  <p className="text-sm text-neutral-600">{item.description}</p>
+                  {item.description ? (
+                    <p className="text-sm text-neutral-600">
+                      {item.description}
+                    </p>
+                  ) : null}
                 </div>
               </li>
             ))}
@@ -84,7 +105,7 @@ export function Consultant() {
       </div>
 
       {/* Bottom: stat cards */}
-      <div className="bg-white px-6 py-8 lg:px-16 lg:py-8">
+      <div className="bg-white px-6 py-8 lg:px-16 lg:py-16">
         <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <div
@@ -98,11 +119,8 @@ export function Consultant() {
               >
                 <Icon icon={stat.icon} width={28} height={28} />
               </span>
-              <span className="text-2xl font-bold text-dark md:text-3xl">
-                {stat.value}
-              </span>
-              <span className="text-sm font-medium text-dark">
-                {stat.label}
+              <span className="text-sm font-medium text-dark md:text-base">
+                {stat.text}
               </span>
             </div>
           ))}
